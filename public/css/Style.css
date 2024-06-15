@@ -1,0 +1,113 @@
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(70, 78, 75); /* Cor de fundo para o corpo da página */
+    font-family: 'Roboto', sans-serif; /* Fonte padrão */
+}
+
+/* Barra de navegação */
+.navbar-light {
+    color: white;
+    background-color: yellowgreen;
+}
+
+/* Botões personalizados */
+.my-sm-0 {
+    background-color: rgb(13, 13, 13);
+    color: white;
+    border-color: white;
+}
+
+.my-sm-0:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+/* Espaçamento superior para o contêiner principal */
+.container {
+    margin-top: 80px; /* Reduzi para 80px para ajustar melhor */
+}
+
+/* Cards na página inicial */
+.card {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo do card mais escuro */
+    color: white;
+    max-width: 100%; /* Largura máxima do card */
+    height: auto; /* Altura automática para ajustar ao conteúdo */
+    margin-bottom: 20px; /* Espaçamento inferior entre os cards */
+    border: none; /* Sem borda nos cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Container flexível */
+    flex-direction: column; /* Disposição em coluna */
+    
+}
+.card .card-img-top {
+    width: 100%;
+    height: 180px; /* Altura fixa para os cards */
+    object-fit: cover; /* Cobrir todo o espaço disponível mantendo a proporção */
+    object-position: center top; /* Cortar da parte superior */
+}
+
+
+.card-custom .card-img-top {
+    width: 286px; /* Largura fixa da imagem */
+    height: 180px; /* Altura fixa da imagem */
+    flex-shrink: 0; /* Evitar que a imagem diminua além do necessário */
+    object-fit: cover;
+}
+
+.card-custom .card-body {
+    padding: 15px; /* Espaçamento interno do corpo do card */
+}
+
+ .btn-primary {
+    margin-top: auto; /* Botão alinhado ao final do card */
+    background-color: yellowgreen; /* Cor de fundo do botão */
+    color: black; /* Cor do texto do botão */
+    border: none; /* Sem borda no botão */
+    padding: 8px 16px; /* Espaçamento interno do botão */
+}
+
+.card-custom .btn-primary:hover {
+    background-color: green; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos para o card na página show.blade.php */
+.show-card {
+    background-color: rgba(7, 7, 7, 0.8); /* Fundo do card mais escuro */
+    color: white;
+    margin-bottom: 20px; /* Espaçamento inferior */
+    border: none; /* Sem borda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.show-card .card-img {
+    width: 100%; /* Largura total da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+}
+
+.show-card .card-body {
+    padding: 20px; /* Espaçamento interno do corpo do card */
+}
+
+.show-card .btn-primary {
+    background-color: yellowgreen; /* Cor de fundo do botão */
+    color: black; /* Cor do texto do botão */
+    border: none; /* Sem borda no botão */
+    padding: 8px 16px; /* Espaçamento interno do botão */
+}
+
+.show-card .btn-primary:hover {
+    background-color: green; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+#story-create-container{
+    color: white;
+}
