@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+color: white;
 }
 
 body {
@@ -68,12 +69,17 @@ body {
 
  .btn-primary {
     margin-top: auto; /* Botão alinhado ao final do card */
-    background-color: yellowgreen; /* Cor de fundo do botão */
+    background-color: rgb(56, 90, 153); /* Cor de fundo do botão */
     color: black; /* Cor do texto do botão */
     border: none; /* Sem borda no botão */
     padding: 8px 16px; /* Espaçamento interno do botão */
 }
-
+.first-text{
+    color: white;
+     border-bottom: 2px  solid rgb(255, 255, 255);
+     border-width: 10%;
+     
+}
 .card-custom .btn-primary:hover {
     background-color: green; /* Cor de fundo ao passar o mouse */
     color: white; /* Cor do texto ao passar o mouse */
@@ -94,7 +100,7 @@ body {
 }
 
 .show-card .card-body {
-    padding: 20px; /* Espaçamento interno do corpo do card */
+    padding: 10px; /* Espaçamento interno do corpo do card */
 }
 
 .show-card .btn-primary {

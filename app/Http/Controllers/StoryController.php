@@ -8,12 +8,23 @@ use Exception;
 
 class StoryController extends Controller
 {
-    public function index()
+    
+    public function index(Request $request)
     {
-        $stories = Story::all();
-        return view("welcome", ['stories' => $stories]);
-    }
+        $search = $request->input('search');
 
+        if ($search) {
+            $stories = Story::where(function ($query) use ($search) {
+                $query->where('title', 'like', '%' . $search . '%')
+                      ->orWhere('subtitle', 'like', '%' . $search . '%')
+                      ->orWhere('Content', 'like', '%' . $search . '%');
+            })->get();
+        } else {
+            $stories = Story::all();
+        }
+
+        return view("welcome", ['stories' => $stories,'search'=>$search]);
+    }
     public function create()
     {
         return view('story.create');

@@ -6,7 +6,7 @@
     <h1 class="mb-4">História</h1>
     
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-my-10">
             <div class="card show-card">
                 <div class="row no-gutters">
                     <div class="col-md-4">

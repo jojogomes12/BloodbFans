@@ -32,22 +32,33 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('story.create') }}">Criar</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('dashboard') }}">Minhas Historias</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Opções
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Entrar</a>
+                        @guest                            <a class="dropdown-item" href="/login">Entrar</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Cadastrar</a>
-                        </div>
+                            <a class="dropdown-item" href="/register">Cadastrar</a>
+                        
+                        @else
+                        <form action="{{route('logout')}}" method="post">
+                            @csrf
+                            <a class="dropdown-item" href="/logout" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
+                        </form>
+                        
+                    </div>
+                        @endguest
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">Zeros2021</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Digite o título que deseja buscar..." aria-label="Search">
+                    <input class="form-control mr-sm-2"  method="get"  action="{{route('Welcome')}}" name="search"  type="search" placeholder="Digite o título que deseja buscar..." aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </div>
